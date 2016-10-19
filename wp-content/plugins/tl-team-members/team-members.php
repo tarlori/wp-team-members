@@ -45,6 +45,13 @@ if( ! class_exists( 'tl_team_member' ) ) {
 
 			);
 
+			// Admin panel
+			if( is_admin() ) {
+
+				include( $this->settings['path'] . 'includes/admin.php' );
+
+			}
+
 			// Actions
 			add_action( 'init',	array( $this, 'register_post_types' ), 5 );
 
