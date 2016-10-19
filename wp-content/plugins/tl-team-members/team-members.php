@@ -56,6 +56,7 @@ if( ! class_exists( 'tl_team_member' ) ) {
 
 			// Actions
 			add_action( 'init',	array( $this, 'register_post_types' ), 5 );
+			add_action( 'init',	array( $this, 'register_taxonomies' ), 5 );
 
 			// Image sizes
 			add_image_size( 'tl_team_member_media', 318, 180, false );
@@ -183,6 +184,40 @@ if( ! class_exists( 'tl_team_member' ) ) {
 				'description' => '',
 			));
 
+		}
+
+		/**
+		 * Register taxonomies.
+		 *
+		 * @return void
+		 */
+		function register_taxonomies() {
+			register_taxonomy(
+				'tl_department',
+				'tl_team_member_post',
+				array(
+					'labels' => array(
+						'name'                       => _x( 'Department', 'taxonomy general name', 'textdomain' ),
+						'singular_name'              => _x( 'Department', 'taxonomy singular name', 'textdomain' ),
+						'search_items'               => __( 'Search Departments', 'textdomain' ),
+						'popular_items'              => __( 'Popular Departments', 'textdomain' ),
+						'all_items'                  => __( 'All Departments', 'textdomain' ),
+						'parent_item'                => null,
+						'parent_item_colon'          => null,
+						'edit_item'                  => __( 'Edit Departments', 'textdomain' ),
+						'update_item'                => __( 'Update Departments', 'textdomain' ),
+						'add_new_item'               => __( 'Add New Departments', 'textdomain' ),
+						'new_item_name'              => __( 'New Departments Name', 'textdomain' ),
+						'separate_items_with_commas' => __( 'Separate Departments with commas', 'textdomain' ),
+						'add_or_remove_items'        => __( 'Add or remove Departments', 'textdomain' ),
+						'choose_from_most_used'      => __( 'Choose from the most used Departments', 'textdomain' ),
+						'not_found'                  => __( 'No Departments found.', 'textdomain' ),
+						'menu_name'                  => __( 'Departments', 'textdomain' ),
+					),
+					'rewrite' => array( 'slug' => 'tl_department' ),
+					'hierarchical' => true,
+					)
+				);
 		}
 
 	}
