@@ -50,7 +50,7 @@ class tl_team_member_admin {
 
 			case 'position':
 
-				$position = get_field( 'tl_team_member_position', $post_id );
+				$position = esc_html(get_field( 'tl_team_member_position', $post_id ));
 
 				echo $position;
 
@@ -58,7 +58,7 @@ class tl_team_member_admin {
 
 			case 'facebook':
 
-				echo '<a href="' . get_field( 'tl_team_member_facebook', $post_id ) . '" target="_blank">' . __( 'Facebook', 'tl_team_member' ) . '</a>';
+				echo '<a href="' . esc_url(get_field( 'tl_team_member_facebook', $post_id )) . '" target="_blank">' . __( 'Facebook', 'tl_team_member' ) . '</a>';
 
 			break;
 

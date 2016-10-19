@@ -1,0 +1,67 @@
+.team-members-title {
+	font-size: 40px !important;
+	margin-top: 0;
+}
+.team-members {
+	margin-top: 60px;
+}
+.team-members .clear-col {
+	clear: both;
+}
+.team-members .team-member--col {
+	padding: 0 25px;
+	margin-bottom: 50px;
+}
+.team-members .team-member--col-inner {
+	border-radius: 6px;
+    border: 1px solid #ddd;
+    border-top: none;
+    text-align: center;
+    padding-bottom: 15px;
+    min-height: 370px;
+}
+.team-members img.photo {
+	width: 100%;
+	max-height: 180px;
+	border-top-right-radius: 6px;
+	border-top-left-radius: 6px;
+}
+.team-member--pad {
+	padding: 0 15px;
+}
+.team-members .team-member--name {
+	padding-top: 15px;
+	font-weight: bold;
+	font-size: 22px;
+}
+.team-members .team-member--position {
+	padding-top: 5px;
+	font-size: 15px;
+	font-style: italic;
+}
+.team-members .team-member--icons {
+	padding-top: 5px;
+}
+
+.team-members .team-member--bio {
+	display: none;
+}
+
+.team-members .team-member--read-more {
+	padding-top: 10px;
+}
+
+.team-members .team-member--read-more button {
+	text-transform: none;
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 767px) {
+	/* Styles */
+	.team-members img.photo {
+		max-width: 318px;
+		width: 100%;
+		max-height: none;
+	}
+}

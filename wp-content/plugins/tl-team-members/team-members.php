@@ -50,6 +50,8 @@ if( ! class_exists( 'tl_team_member' ) ) {
 
 				include( $this->settings['path'] . 'includes/admin.php' );
 
+			} else {
+				include( $this->settings['path'] . 'includes/front.php' );
 			}
 
 			// Actions
